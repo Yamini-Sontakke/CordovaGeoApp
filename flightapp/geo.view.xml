@@ -1,0 +1,11 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flightapp.geo" xmlns:html="http://www.w3.org/1999/xhtml">
+  <VBox>
+    <html:input id="txtLocation" type="text"></html:input>
+    <Button id="locationBtn" text="locate"/>
+    <html:div id="mapDiv" style="position:relative;width:280px;height:400px;">
+      
+    </html:div>
+    
+  </VBox>
+</core:View>

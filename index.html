@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CordovaGeoApp</title>
+
+    <!-- CordovaGeoApp references -->
+    <link href="css/index.css" rel="stylesheet" />
+    <script type="text/javascript" src="flighapp/mapcontrol.js"></script>
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-resourceroots='{"./":"flightapp"}'>
+    </script>
+    <script>
+        sap.ui.localResources("flightapp");
+
+        var app = new sap.m.App({ initialPage: "main" });
+        var camerapage = sap.ui.view({ id: "main", viewName: "flightapp.geo", type: sap.ui.core.mvc.ViewType.XML });
+        //var picturepage = sap.ui.view({ id: "pic", viewName: "flightapp.picture", type: sap.ui.core.mvc.ViewType.XML });
+        app.addPage(camerapage);
+        //app.addPage(picturepage);
+        app.placeAt("content");
+
+
+    </script>
+
+</head>
+
+<body>
+   <div id="content"></div>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
